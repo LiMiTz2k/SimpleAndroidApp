@@ -1,5 +1,8 @@
 package kofidankwa.com.myweatherapp.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -169,7 +172,6 @@ public class WeeklyWeather {
     public void setMainIcon(String mainIcon) {
         mMainIcon = mainIcon;
     }
-
 
 
   /*  public String getFormattedTime(){

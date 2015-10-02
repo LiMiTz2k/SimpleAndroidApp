@@ -4,6 +4,7 @@ package kofidankwa.com.myweatherapp.ui;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.net.ConnectivityManager;
@@ -34,6 +35,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 
 import butterknife.Bind;
@@ -107,8 +109,8 @@ public class MainActivity extends Activity implements ConnectionCallbacks,
 /** called when the user clicks the send button **/
     public void sendMessage(View view){
 // do something in response to button
-       // Intent intent = new Intent(this, DisplayMessageActivity.class);
-        //intent.putExtra();
+        Intent intent = new Intent(this, HourlyWeatherReport.class);
+        intent.putExtra("data", dataBundle());
     }
 
     public void updateDisplay(){
@@ -119,6 +121,13 @@ public class MainActivity extends Activity implements ConnectionCallbacks,
         mSummaryLabel.setText(mCurrentWeather.getSummary());
         Drawable drawable = ContextCompat.getDrawable(this, mCurrentWeather.getIconId());
         mIconImageView.setImageDrawable(drawable);
+    }
+
+    public HashMap<String, Object> dataBundle() {
+        HashMap<String, Object> data = new HashMap<String, Object>();
+        data.put("Hour", mHourlyWeather);
+        data.put("Week", mWeeklyWeather);
+        return data;
     }
 
     private CurrentWeather getCurrentDetails(String jsonData) throws JSONException {
