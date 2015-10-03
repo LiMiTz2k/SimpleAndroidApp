@@ -211,7 +211,7 @@ public class MainActivity extends Activity implements ConnectionCallbacks,
 
         if (isNetworkAvailable() && mGoogleApiClient.isConnected()) {
             OkHttpClient client = new OkHttpClient();
-
+            mForcastService.setApiKey(getResources().getString(R.string.forcast_api_key));
             Request request = new Request.Builder()
                     .url(mForcastService.getApiRequestKey(mForcastService.getLatitude(), mForcastService.getLongitude()))
                     .build();

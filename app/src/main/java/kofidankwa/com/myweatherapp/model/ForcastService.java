@@ -1,6 +1,12 @@
 package kofidankwa.com.myweatherapp.model;
 
 
+import android.content.Context;
+
+import kofidankwa.com.myweatherapp.R;
+
+
+
 
 /**
  * Created by kofidankwa on 16/09/15.
@@ -9,7 +15,7 @@ public class ForcastService {
 
     private double mLongitude;
     private double mLatitude;
-    private String mApiKey = "insert your api key here";
+    private String mApiKey; //"insert your api key here";
 
   // I'll use data from the geolocation api to setup the forcast api, then I'll run the forcast api on the main activity.
 
