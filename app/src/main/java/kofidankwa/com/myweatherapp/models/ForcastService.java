@@ -1,11 +1,4 @@
-package kofidankwa.com.myweatherapp.model;
-
-
-import android.content.Context;
-
-import kofidankwa.com.myweatherapp.R;
-
-
+package kofidankwa.com.myweatherapp.models;
 
 
 /**

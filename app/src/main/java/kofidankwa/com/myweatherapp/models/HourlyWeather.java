@@ -1,4 +1,4 @@
-package kofidankwa.com.myweatherapp.model;
+package kofidankwa.com.myweatherapp.models;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

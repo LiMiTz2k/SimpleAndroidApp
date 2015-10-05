@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name = "forcast_api_key"></string>
+    <string name = "forcast_api_key">2d6d8f09271c2c9818521e0afd57db63</string>
 </resources>

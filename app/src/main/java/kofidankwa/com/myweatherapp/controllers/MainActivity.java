@@ -1,4 +1,4 @@
-package kofidankwa.com.myweatherapp.ui;
+package kofidankwa.com.myweatherapp.controllers;
 
 
 
@@ -41,10 +41,10 @@ import java.util.HashMap;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import kofidankwa.com.myweatherapp.R;
-import kofidankwa.com.myweatherapp.model.CurrentWeather;
-import kofidankwa.com.myweatherapp.model.ForcastService;
-import kofidankwa.com.myweatherapp.model.HourlyWeather;
-import kofidankwa.com.myweatherapp.model.WeeklyWeather;
+import kofidankwa.com.myweatherapp.models.CurrentWeather;
+import kofidankwa.com.myweatherapp.models.ForcastService;
+import kofidankwa.com.myweatherapp.models.HourlyWeather;
+import kofidankwa.com.myweatherapp.models.WeeklyWeather;
 
 
 public class MainActivity extends Activity implements ConnectionCallbacks,
@@ -100,7 +100,6 @@ public class MainActivity extends Activity implements ConnectionCallbacks,
             }
         });
 
-
     }
 
     /*private int BackgroundSetter(){
@@ -111,6 +110,7 @@ public class MainActivity extends Activity implements ConnectionCallbacks,
 // do something in response to button
         Intent intent = new Intent(this, HourlyWeatherReport.class);
         intent.putExtra("data", dataBundle());
+        startActivity(intent);
     }
 
     public void updateDisplay(){
